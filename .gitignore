@@ -98,3 +98,5 @@ fabric.properties
 
 /api-module/api-module.iml
 /common-module/common-module.iml
+/springboot-multi-module-demo.iml
+/.idea/
