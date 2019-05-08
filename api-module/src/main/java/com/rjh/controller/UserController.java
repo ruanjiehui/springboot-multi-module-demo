@@ -3,6 +3,7 @@ package com.rjh.controller;
 import com.rjh.dto.User;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
@@ -23,6 +24,11 @@ public class UserController {
      * 模拟自增ID
      */
     private AtomicLong currentId=new AtomicLong(1);
+
+    @GetMapping
+    public Collection<User> listAll(){
+        return users.values();
+    }
 
     @GetMapping("{id}")
     public User getUserById(@PathVariable("id") Long id){
